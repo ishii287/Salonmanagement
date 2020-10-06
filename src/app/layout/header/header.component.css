@@ -1,0 +1,10 @@
+.navbar-brand {
+    margin-left: +60px ;  /* 70% of your logo width */
+  
+}
+
+.nav-link{
+    font-style: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
