@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'salon-management-website'`, () => {
+  it(`should have as title 'salon-management'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('salon-management-website');
+    expect(app.title).toEqual('salon-management');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('salon-management-website app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('salon-management app is running!');
   });
 });

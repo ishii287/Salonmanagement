@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "salon-management-website": {
+    "salon-management": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/salon-management-website",
+            "outputPath": "dist/salon-management",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "salon-management-website:build"
+            "browserTarget": "salon-management:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "salon-management-website:build:production"
+              "browserTarget": "salon-management:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "salon-management-website:build"
+            "browserTarget": "salon-management:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "salon-management-website:serve"
+            "devServerTarget": "salon-management:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "salon-management-website:serve:production"
+              "devServerTarget": "salon-management:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "salon-management-website"
+  "defaultProject": "salon-management"
 }

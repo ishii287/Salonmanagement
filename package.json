@@ -1,5 +1,5 @@
 {
-  "name": "salon-management-website",
+  "name": "salon-management",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -16,11 +16,11 @@
     "@angular/compiler": "~10.0.14",
     "@angular/core": "~10.0.14",
     "@angular/forms": "~10.0.14",
+    "@angular/localize": "^10.0.14",
     "@angular/platform-browser": "~10.0.14",
     "@angular/platform-browser-dynamic": "~10.0.14",
     "@angular/router": "~10.0.14",
-    "@fortawesome/angular-fontawesome": "^0.7.0",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "bootstrap": "^4.5.2",
     "ngx-toastr": "^13.0.1",
     "rxjs": "~6.5.5",
