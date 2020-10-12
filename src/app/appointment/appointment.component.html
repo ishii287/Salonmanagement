@@ -1,0 +1,152 @@
+
+
+<img src="../../assets/blake-wisz-GFrBMipOd_E-unsplash.jpg" alt="appointmentimg " width="100%" height="550" background-attachment="fixed">  
+ <br> <br>
+
+ <h1 >BOOK AN APPOINTMENT ONLINE</h1><br>
+ <p class="animated fadeInLeft">Our online bookings service operates between 10:00a.m. and 6:00p.m.</p>
+
+    <p class="animated fadeInLeft">During opening hours, we'll call you back within 1 hour to confirm your appointment. Outside opening hours we will call you soon after 10:00am
+
+ </p>
+
+    <p class="animated fadeInLeft">Your data is safe with us! We will only use your details to process your salon booking, and won't share them with third parties.  </p>
+<br><br>
+
+<div class="bg-img">
+  <div class="box">
+    <br>
+<h1 class="text-warning " style="text-decoration: underline; font-family: lucida handwriting; font-size: 50px;">Appointment Form</h1>
+<div class="text-center" >
+
+  <form name="elementForm" role="form" method="post" enctype="multipart/form-data">	
+<br><br>
+
+  <div class="form-group col-md-12 align-items-center">
+<!-- <ul class="bookAppointmentform formField animated fadeInLeft"> -->
+  <!-- <div class="form-group row"> -->
+    <div class="col-sm-10 col-xs-3 ">
+        <label class="col-sm-2 col-form-label font-weight-bold ">Name  <i class="fa fa-user" aria-hidden="true" ></i></label>
+     <input type="text" tabindex="1" required name="name" data-validation="required" data-validation-error-msg="Name is required" placeholder="Name*">
+    <!-- </div> -->
+  </div>
+
+  <div class="col-sm-10 col-xs-3"> 
+    <label class="col-sm-2 col-form-label font-weight-bold">Contact<i class="fa fa-phone" aria-hidden="true"></i></label>
+      <input type="text" tabindex="3" id="phone" required name="contact" maxlength="10" data-validation="required" data-validation-error-msg="Contact is required"  placeholder="Contact*">
+  </div>
+ 
+  <div class="col-sm-10 col-xs-3"> 
+  <label class="col-sm-2 col-form-label font-weight-bold">Email <i class="fa fa-envelope" aria-hidden="true"></i></label>
+  <input type="email" tabindex="3" required name="email" placeholder="Email Id">
+</div>
+
+
+<div class="col-sm-10 col-xs-3"> 
+<label class="col-sm-2 col-form-label font-weight-bold">City <i class="fa fa-map-marker" aria-hidden="true"></i></label>
+<select name="city" data-validation="required" tabindex="4"  required data-validation-error-msg="City is required" class="col-sm-4 ">
+<option value="">City*</option>
+<option value="Agra">Agra</option>
+<option value="Ahmedabad">Ahmedabad</option>
+<option value="Amritsar">Amritsar</option>
+<option value="Bareilly">Bareilly</option>
+<option value="Bengaluru">Bengaluru</option>
+<option value="Bhopal">Bhopal</option>
+<option value="Bhubaneshwar">Bhubaneshwar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Dehradun">Dehradun</option>
+<option value="Delhi NCR">Delhi NCR</option>
+<option value="Gorakhpur">Gorakhpur</option>
+<option value="Guwahati">Guwahati</option>
+<option value="Gwalior">Gwalior</option>
+<option value="Haldwani">Haldwani</option>
+<option value="Indore">Indore</option>
+<option value="Jabalpur">Jabalpur</option>
+<option value="Jaipur">Jaipur</option>
+<option value="Jalandhar">Jalandhar</option>
+<option value="Jammu">Jammu</option>
+<option value="Kanpur">Kanpur</option>
+<option value="Karnal">Karnal</option>
+<option value="Lucknow">Lucknow</option>
+<option value="Ludhiana">Ludhiana</option>
+<option value="Mathura">Mathura</option>
+<option value="Mohali">Mohali</option>
+<option value="Moradabad">Moradabad</option>
+<option value="Mumbai">Mumbai</option>
+<option value="New Delhi">New Delhi</option>
+<option value="panchkula">panchkula</option>
+<option value="Panipat">Panipat</option>
+<option value="Patna">Patna</option>
+<option value="Pune">Pune</option>
+<option value="Rohtak">Rohtak</option>
+<option value="Varanasi">Varanasi</option>
+</select>
+ 
+<!-- </ul> -->
+</div>
+  
+
+<!-- <div class="col-sm-6  animated fadeInLeft">
+<ul class="bookAppointmentform formField"> -->
+
+<!--<li><strong>Select Gender:</strong> <br/>
+<input type="radio" id="Gents" name="gender" value="1"> 
+<label for="Gents">Gents</label> 
+<input type="radio" id="Ladies" name="gender" value="2" style="margin-left:20px"> 
+<label for="Ladies">Ladies</label></li> -->
+
+<div class="col-sm-10 col-xs-3">
+       <label class="col-sm-2 col-form-label font-weight-bold">Gender <i class="fa fa-male" aria-hidden="true"></i></label>
+   <select name="gender" tabindex="6" data-validation="required"  required data-validation-error-msg="Services is required" id="s1" 
+   onchanged=AjaxFunction(); class="col-sm-4 ">
+   <option>Gender*</option>
+   <option value="1">Ladies</option>
+   <option value="2">Gents</option>
+   </select>
+    </div>
+   
+       
+   
+    <div class="col-sm-10 col-xs-3">
+       <label class="col-sm-2 col-form-label font-weight-bold">Service<i class="fa fa-scissors"></i></label>
+          <input type="text" name="service" required tabindex="8" required data-validation="required" data-validation-error-msg="Preferred service is required" placeholder="Service type" >
+
+</div>
+  
+       <div class="col-sm-10 col-xs-3">
+  <label class="col-sm-2 col-form-label font-weight-bold">Date <i class="fa fa-calendar" aria-hidden="true"></i> </label>
+  <input type="text" name="date" required tabindex="8" required data-validation="required" data-validation-error-msg="Preferred Date is required" placeholder="Preferred Date*" id="datepicker">
+  </div>
+  
+  <div class="col-sm-10 col-xs-3">
+  <label class="col-sm-2 col-form-label font-weight-bold">Time <i class="fa fa-clock-o" aria-hidden="true" ></i></label>
+    <input type="text" required name="time" data-validation="required" tabindex="9" data-validation-error-msg="Preferred Time is required" placeholder="Preferred Time*" style="width:auto;max-width:116px;  ">
+    <select  name="meridiem" style="width:auto; background-position:100% 21% !important; padding-right:20px">
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+    </select>
+    </div>
+<!-- </ul>
+</div>
+      -->
+      <br><br>
+  </div>
+<div class="clearfix"></div>
+ 
+
+<p class="hBookNow font-weight-bold "><button type="submit" style="margin-bottom:1; color: indigo;">Book&nbsp;Appointment</button></p>
+
+</form>	
+</div>
+</div>
+</div>
+<br>
+
+<br>
+
+
+  
+
+  
+
+   
