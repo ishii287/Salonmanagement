@@ -8,3 +8,19 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* #topheader .navbar-nav li > a { 
+    text-transform: capitalize; 
+    color: #333; 
+    -webkit-transition: background-color .2s, color .2s; 
+    transition: background-color .2s, color .2s; 
+}  */
+ .navbar-nav li > a:hover,  
+.navbar-nav li > a:focus { 
+    background-color:#968700; 
+    color: #fff; 
+} 
+/* #topheader .navbar-nav li.active > a { 
+    background-color: black; 
+    color: yellow; 
+}  */
+

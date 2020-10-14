@@ -11,20 +11,19 @@
   </a>
   <div class="collapse navbar-collapse " id="navcol-1">
       
-   
     <ul class="nav navbar-nav ml-auto ">
-      <li class="nav-item px-3  " role="presentation"><a class="nav-link text-warning " routerLink="/">HOME</a></li>
-      <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white"  href="../../services">SERVICES</a></li>
-      <li class="nav-item px-3 " role="presentation" ><a routerLinkActive="active" [routerLink]="['/appointment']" class="nav-link text-white" >APPOINTMENT</a></li>
+      <li class=" active nav-item px-3  " role="presentation"><a class="nav-link text-white " routerLink="/">HOME</a></li>
+      <li class=" nav-item px-3 " role="presentation"><a class="nav-link text-white " [routerLink]="['/services']">SERVICES</a></li>
+      <li class="nav-item px-3 " role="presentation" ><a [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/appointment']" class="nav-link text-white" >APPOINTMENT</a></li>
       <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white" href="#">STAFF</a></li>
       <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white" href="https://www.amazon.in/s?k=cosmetics+product&crid=2TZWGT1W5VMU9&sprefix=cosmetics%2Caps%2C1031&ref=nb_sb_ss_i_3_9">STORE</a></li>
-      <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white" [routerLink]="['/aboutus']">ABOUT US</a></li>
-      <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white" href="#">CONTACT US</a></li>
+      <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/aboutus']">ABOUT US</a></li>
+      <li class="nav-item px-3 " role="presentation"><a class="nav-link text-white"  [routerLink]="['/contactus']">CONTACT US</a></li>
        </ul>
        
+       </div>  
+    
          
-         </div>
-         
-
-
+        
+      </div>
         

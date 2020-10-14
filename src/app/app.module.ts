@@ -10,7 +10,9 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { HomeComponent } from './home/home.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { StaffComponent } from './staff/staff.component';  
+import { StaffComponent } from './staff/staff.component';
+import { ServicesComponent } from './services/services.component';
+import { ContactusComponent } from './contactus/contactus.component';  
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { StaffComponent } from './staff/staff.component';
     AppointmentComponent,
     AboutusComponent,
     StaffComponent,
+    ServicesComponent,
+    ContactusComponent,
  
   ],
   imports: [
