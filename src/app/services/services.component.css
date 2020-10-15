@@ -1,0 +1,17 @@
+img{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: #968700;
+  }
+  /* .appoint{
+    top: 20%;
+    left: 10%;
+    transform: translate(-30%, -10%);
+  } */

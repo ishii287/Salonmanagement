@@ -1,0 +1,7 @@
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    color: #968700;
+  }

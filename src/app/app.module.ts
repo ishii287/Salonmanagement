@@ -10,9 +10,9 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { HomeComponent } from './home/home.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { StaffComponent } from './staff/staff.component';
 import { ServicesComponent } from './services/services.component';
-import { ContactusComponent } from './contactus/contactus.component';  
+import { ContactusComponent } from './contactus/contactus.component';
+import { ServicesMenComponent } from './services-men/services-men.component';  
 
 @NgModule({
   declarations: [
@@ -23,9 +23,9 @@ import { ContactusComponent } from './contactus/contactus.component';
     HomeComponent,
     AppointmentComponent,
     AboutusComponent,
-    StaffComponent,
     ServicesComponent,
     ContactusComponent,
+    ServicesMenComponent,
  
   ],
   imports: [
