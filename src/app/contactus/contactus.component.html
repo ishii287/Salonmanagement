@@ -1,10 +1,55 @@
-<br>
-<img src="../../assets/jamie-street-JBQdeLezIxQ-unsplash.jpg" class="w-100 p-3">
-<div class="centered" style="font-family: italic small-caps bold 240px/6 cursive; font-weight: bold;">
-    <h1 class="display-2">Contact Us</h1>
-</div>
 
-
-<br><br><br><br>
-<img src="../../assets/Screenshot (16).png" alt="..." class="w-100 p-3">
 <br><br>
+<img src="../../assets/jamie-street-JBQdeLezIxQ-unsplash.jpg" class="w-100 p-0">
+
+<!-- <div class="centered" style="font-family: italic small-caps bold 240px/6 cursive; font-weight: bold;">
+    <h1 class="display-2">Contact Us</h1>
+</div> -->
+<div style="background-image: url(../../assets/pexels-photo-255379.jpeg); background-attachment: fixed;">
+
+<br><br><br><br><br>
+<div class="container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <p>Swing by for a cup of coffee, or leave us a message:</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="../../assets/1df6a24f1db1fa48e2a52c940004fa3f.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <form name="myForm">
+          <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="fname" aria-describedby="emailHelp" placeholder="Enter name" required>
+                            <br>
+                         <label for="email" >Email address</label>
+          <input type="email" class="form-control" name="femail" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <br>
+          <label for="number">Phone</label>
+          <input type="tel" class="form-control"  pattern="^\d{10}$" id="number"  name="fphone" aria-describedby="Phone" placeholder="Enter phone" required>
+          <br>
+          <label for="subject" >Message</label>
+          <textarea id="message" name="subject" placeholder="Message...."  style="height:190px" required></textarea>
+        <br>
+          <button (click)="validateForm()">
+            Send Message
+        </button>
+          <!-- <input type="submit" value="Send Message"> -->
+         
+        </form>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br>
+</div>
+<br>
+<img src="../../assets/55998b3bc9e8ffae0e9cbbf5069c617e.jpg" width="500" height="400" style="opacity: 0.8;"id="qw" >&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="../../assets/c1431aba0bb109f38fa189129731dda5.jpg" width="600" height="300" id="qw">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="../../assets/il_340x270.2158573002_2j2q.jpg" width="500" height="400"style="opacity:0.8" id="qw">
+<!-- <img src="../../assets/Screenshot (16).png" alt="..." class="w-100 p-3"> -->
+<br><br><br><br>
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+ <br><br>
+ 

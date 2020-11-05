@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
+import {ReactiveFormsModule} from "@angular/forms"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ServicesMenComponent } from './services-men/services-men.component';  
+import {FormsModule} from "@angular/forms"
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,16 @@ import { ServicesMenComponent } from './services-men/services-men.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule 
+    NgbModule,
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAybfMYvHJjL_wa1cITzCehxt83T0oB6aU'
+    }) ,
+    BrowserAnimationsModule,
+    FormsModule,
+	ToastrModule.forRoot({
+    timeOut:1500,
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]

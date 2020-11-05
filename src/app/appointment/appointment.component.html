@@ -12,81 +12,128 @@
 
    <p class="animated fadeInLeft">Your data is safe with us! We will only use your details to process your salon booking, and won't share them with third parties.  </p>
 <br><br>
-
 <div class="bg-img">
- <div class="box">
-   <br>
-<h1 class="text-warning " style="text-decoration: underline; font-family: lucida handwriting; font-size: 50px;">Appointment Form</h1>
-<div class="text-center" >
+ <!-- <div class="box"> -->
+   <div class="jumbotron jumbotron-fluid">
+<h1 class="text-warning " style="text-decoration: underline; font-family: lucida handwriting; font-size: 45px;">Appointment Form</h1>
+<br>
+<!-- <div class=" text-center">  -->
+     <!-- <div class="card-body"> -->
+       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"   class=" offset-lg-3">
+       
+         <div class="form-group row ">   
+           <!-- <div class="form-group col-4"> -->
+             <label class="col-sm-2 font-weight-bold col-form-label"> Name  <i class="fa fa-user" aria-hidden="true" ></i></label>
+             <div class="col-sm-4">
+             <input
+               type="text"
+               class="form-control"
+               formControlName="firstName"
+               placeholder="Name*"
+               [ngClass]="{ 'is-invalid': submitted && h.firstName.errors }"
+             />
+             </div>
+             
+             <div *ngIf="submitted && h.firstName.errors" class="text-warning">
+               <div *ngIf="h.firstName.errors.required">
+                  Name is required
+               </div>
+             </div>
+           </div>
+         <!-- </div> -->
+           <!-- <div class="form-group col-4"> -->
+            <div class="form-group row">
+            <label class="col-sm-2 font-weight-bold col-form-label">Phone <i class="fa fa-phone" aria-hidden="true"></i></label>
+            <div class="col-sm-4">
+             <input
+               formControlName="phone"
+               [ngClass]="{ 'is-invalid': submitted && h.phone.errors }"
+               type="text"
+               class="form-control"
+               placeholder="Contact*"
+             />
+            </div>
+             <div *ngIf="submitted && h.phone.errors" class="text-warning">
+               <div *ngIf="h.phone.errors.required">
+                 Phone Number is required
+               </div>
+               </div>
+             <!-- </div> -->
+           </div>
+            
 
- <form name="elementForm" role="form" method="post" enctype="multipart/form-data">	
-<br><br>
-
- <div class="form-group col-md-12 align-items-center">
-<!-- <ul class="bookAppointmentform formField animated fadeInLeft"> -->
- <!-- <div class="form-group row"> -->
-   <div class="col-sm-10 col-xs-3 ">
-       <label class="col-sm-2 col-form-label font-weight-bold ">Name  <i class="fa fa-user" aria-hidden="true" ></i></label>
-    <input type="text" tabindex="1" required name="name" data-validation="required" data-validation-error-msg="Name is required" placeholder="Name*">
-   <!-- </div> -->
- </div>
-
- <div class="col-sm-10 col-xs-3"> 
-   <label class="col-sm-2 col-form-label font-weight-bold">Contact<i class="fa fa-phone" aria-hidden="true"></i></label>
-     <input type="text" tabindex="3" id="phone" required name="contact" maxlength="10" data-validation="required" data-validation-error-msg="Contact is required"  placeholder="Contact*">
- </div>
-
- <div class="col-sm-10 col-xs-3"> 
- <label class="col-sm-2 col-form-label font-weight-bold">Email <i class="fa fa-envelope" aria-hidden="true"></i></label>
- <input type="email" tabindex="3" required name="email" placeholder="Email Id">
-</div>
-
-
-<div class="col-sm-10 col-xs-3"> 
-<label class="col-sm-2 col-form-label font-weight-bold">City <i class="fa fa-map-marker" aria-hidden="true"></i></label>
-<select name="city" data-validation="required" tabindex="4"  required data-validation-error-msg="City is required" class="col-sm-4 ">
-<option value="">City*</option>
-<option value="Agra">Agra</option>
-<option value="Ahmedabad">Ahmedabad</option>
-<option value="Amritsar">Amritsar</option>
-<option value="Bareilly">Bareilly</option>
-<option value="Bengaluru">Bengaluru</option>
-<option value="Bhopal">Bhopal</option>
-<option value="Bhubaneshwar">Bhubaneshwar</option>
-<option value="Chandigarh">Chandigarh</option>
-<option value="Dehradun">Dehradun</option>
-<option value="Delhi NCR">Delhi NCR</option>
-<option value="Gorakhpur">Gorakhpur</option>
-<option value="Guwahati">Guwahati</option>
-<option value="Gwalior">Gwalior</option>
-<option value="Haldwani">Haldwani</option>
-<option value="Indore">Indore</option>
-<option value="Jabalpur">Jabalpur</option>
-<option value="Jaipur">Jaipur</option>
-<option value="Jalandhar">Jalandhar</option>
-<option value="Jammu">Jammu</option>
-<option value="Kanpur">Kanpur</option>
-<option value="Karnal">Karnal</option>
-<option value="Lucknow">Lucknow</option>
-<option value="Ludhiana">Ludhiana</option>
-<option value="Mathura">Mathura</option>
-<option value="Mohali">Mohali</option>
-<option value="Moradabad">Moradabad</option>
-<option value="Mumbai">Mumbai</option>
-<option value="New Delhi">New Delhi</option>
-<option value="panchkula">panchkula</option>
-<option value="Panipat">Panipat</option>
-<option value="Patna">Patna</option>
-<option value="Pune">Pune</option>
-<option value="Rohtak">Rohtak</option>
-<option value="Varanasi">Varanasi</option>
-</select>
-
-<!-- </ul> -->
-</div>
+            <div class="form-group row">
+           <label class="col-sm-2 font-weight-bold col-form-label">Email <i class="fa fa-envelope" aria-hidden="true"></i></label>
+           <div class="col-sm-4">
+           <input
+             formControlName="email"
+             [ngClass]="{ 'is-invalid': submitted && h.email.errors }"
+             type="text"
+             class="form-control"
+             placeholder="Email Id*"
+           />
+         </div>
+           <div *ngIf="submitted && h.email.errors" class="text-warning">
+             <div *ngIf="h.email.errors.required"
+             >Email is required</div>
+             <div *ngIf="h.email.errors.email">
+               Email must be a valid email address
+            
+           </div>
+         </div>
+         </div>
  
+         <ng-container *ngIf="h.email.touched && h.email.errors">
+           <div *ngIf="h.email.errors.required" class="text-danger">
+             Value is required.
+           </div>
+         </ng-container>
 
-<!-- <div class="col-sm-6  animated fadeInLeft">
+         
+         <div class="form-group row">
+         <label class="col-sm-2  font-weight-bold col-form-label">City <i class="fa fa-map-marker" aria-hidden="true"></i></label>
+         <select name="city" data-validation="required" class="form-control" tabindex="4"  required data-validation-error-msg="City is required" class="col-sm-4 ">
+         <option value="">City*</option>
+         <option value="Agra">Agra</option>
+         <option value="Ahmedabad">Ahmedabad</option>
+         <option value="Amritsar">Amritsar</option>
+         <option value="Bareilly">Bareilly</option>
+         <option value="Bengaluru">Bengaluru</option>
+         <option value="Bhopal">Bhopal</option>
+         <option value="Bhubaneshwar">Bhubaneshwar</option>
+         <option value="Chandigarh">Chandigarh</option>
+         <option value="Dehradun">Dehradun</option>
+         <option value="Delhi NCR">Delhi NCR</option>
+         <option value="Gorakhpur">Gorakhpur</option>
+         <option value="Guwahati">Guwahati</option>
+         <option value="Gwalior">Gwalior</option>
+         <option value="Haldwani">Haldwani</option>
+         <option value="Indore">Indore</option>
+         <option value="Jabalpur">Jabalpur</option>
+         <option value="Jaipur">Jaipur</option>
+         <option value="Jalandhar">Jalandhar</option>
+         <option value="Jammu">Jammu</option>
+         <option value="Kanpur">Kanpur</option>
+         <option value="Karnal">Karnal</option>
+         <option value="Lucknow">Lucknow</option>
+         <option value="Ludhiana">Ludhiana</option>
+         <option value="Mathura">Mathura</option>
+         <option value="Mohali">Mohali</option>
+         <option value="Moradabad">Moradabad</option>
+         <option value="Mumbai">Mumbai</option>
+         <option value="New Delhi">New Delhi</option>
+         <option value="panchkula">panchkula</option>
+         <option value="Panipat">Panipat</option>
+         <option value="Patna">Patna</option>
+         <option value="Pune">Pune</option>
+         <option value="Rohtak">Rohtak</option>
+         <option value="Varanasi">Varanasi</option>
+         </select>
+         
+         <!-- </ul> -->
+         </div>
+
+         <!-- <div class="col-sm-6  animated fadeInLeft">
 <ul class="bookAppointmentform formField"> -->
 
 <!--<li><strong>Select Gender:</strong> <br/>
@@ -95,53 +142,65 @@
 <input type="radio" id="Ladies" name="gender" value="2" style="margin-left:20px"> 
 <label for="Ladies">Ladies</label></li> -->
 
-<div class="col-sm-10 col-xs-3">
-      <label class="col-sm-2 col-form-label font-weight-bold">Gender <i class="fa fa-male" aria-hidden="true"></i></label>
-  <select name="gender" tabindex="6" data-validation="required"  required data-validation-error-msg="Services is required" id="s1" 
-  onchanged=AjaxFunction(); class="col-sm-4 ">
-  <option>Gender*</option>
-  <option value="1">Ladies</option>
-  <option value="2">Gents</option>
-  </select>
-   </div>
-  
-      
-  
-   <div class="col-sm-10 col-xs-3">
-      <label class="col-sm-2 col-form-label font-weight-bold">Service<i class="fa fa-scissors"></i></label>
-         <input type="text" name="service" required tabindex="8" required data-validation="required" data-validation-error-msg="Preferred service is required" placeholder="Service type" >
-
+<div class="form-group row">
+   <label class="col-sm-2 col-form-label font-weight-bold ">Gender <i class="fa fa-male" aria-hidden="true"></i></label>
+   
+<select name="gender" tabindex="6" data-validation="required"  required data-validation-error-msg="Services is required" id="s1" 
+onchanged=AjaxFunction(); class="col-sm-4 ">
+<option>Gender*</option>
+<option value="1">Ladies</option>
+<option value="2">Gents</option>
+</select>
 </div>
- 
-      <div class="col-sm-10 col-xs-3">
- <label class="col-sm-2 col-form-label font-weight-bold">Date <i class="fa fa-calendar" aria-hidden="true"></i> </label>
- <input type="date" name="date" required tabindex="8" required data-validation="required" data-validation-error-msg="Preferred Date is required" placeholder="Preferred Date*" id="datepicker">
- </div>
- 
- <div class="col-sm-10 col-xs-3">
- <label class="col-sm-2 col-form-label font-weight-bold">Time <i class="fa fa-clock-o" aria-hidden="true" ></i></label>
-   <input type="text" required name="time" data-validation="required" tabindex="9" data-validation-error-msg="Preferred Time is required" placeholder="Preferred Time*" style="width:auto;max-width:116px;  ">
-   <select  name="meridiem" style="width:auto; background-position:100% 21% !important; padding-right:20px">
-   <option value="AM">AM</option>
-   <option value="PM">PM</option>
-   </select>
-   </div>
+
+   
+
+<div class="form-group row">
+   <label class="col-sm-2 col-form-label font-weight-bold">Service <i class="fa fa-scissors"></i></label>
+   <div class="col-sm-4">
+      <input type="text" class="form-control" name="service" placeholder="Service type" required >
+</div>
+</div>
+
+<div class="form-group row">
+   <label class="col-sm-2 col-form-label font-weight-bold">  Date <i class="fa fa-calendar" aria-hidden="true"></i> </label>
+   <div class="col-sm-4">
+<input type="date" name="date" class="form-control"  required>
+</div>
+</div>
+
+<div class="form-group row">
+   <label class="col-sm-2 col-form-label font-weight-bold">Time <i class="fa fa-clock-o" aria-hidden="true" ></i></label>
+   <div class="col-sm-4">
+<input type="time" required name="time" class="form-control" data-validation="required"  placeholder="Preferred Time*" >
+
+<!-- <select  name="meridiem" class="form-control" style=" padding-right:30px">
+<option value="AM">AM</option>
+<option value="PM">PM</option>
+</select> -->
+</div>
+</div>
+<!-- <input type="time" id="appt" name="appt"
+       min="09:00" max="18:00" required> -->
+
 <!-- </ul>
 </div>
-     -->
-     <br><br>
- </div>
-<div class="clearfix"></div>
+  -->
 
+<!-- </div> -->
 
-<p class="hBookNow font-weight-bold "><button type="submit" class="btn btn-warning btn-lg" style="margin-bottom:1; color: black;">Book&nbsp;Appointment</button></p>
-
-</form>	
-</div>
-</div>
-</div>
+<div class="text-center">
+    <button class="btn btn-success btn-lg px-5 mr-5">Book Appointment</button>
+           
+           <!-- <p class="text white">Value: {{ registerForm.value | json }}</p>
+           <p class="text white">Value: {{ registerForm.valid | json }}</p> -->
+         </div>
+       </form>
+     </div>
+   </div>
+ <!-- </div> -->
+ 
 <br>
-
 <br>
 
 
